@@ -9,7 +9,7 @@ This project captures research to effectively fix the lack of underlying control
 
 The paper is a brief introduction to the problem of memory corruption and a description of one way to solve the cyber consequence of control flow hijacking. Then a discussion on the issues that may be encountered in the Enterprise when an architecural change like this is introduced.
  
-Any quesions or discussion can be sent by Email to control-flow-integrity@nsa.gov or open an issue via github tracker.
+Any quesions or discussion can be sent by Email to control-flow-integrity@nsa.gov or open an [issue via GitHub tracker](https://github.com/iadgov/Control-Flow-Integrity/issues/new).
 
 ## Code 
 
