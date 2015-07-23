@@ -5,7 +5,7 @@
 This project captures research to effectively fix the lack of underlying control flow enforcement that would prevent memory corruption exploitation. This is not existent today but could be implemented in the future by the IT industry.
 
 ## Paper
-[Hardware Control Flow Integrity (CFI) for an IT Ecosystem](https://github.com/iadgov/Control-Flow-Integrity/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
+[Hardware Control Flow Integrity (CFI) for an IT Ecosystem](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
 
 The paper is a brief introduction to the problem of memory corruption and a description of one way to solve the cyber consequence of control flow hijacking. Then a discussion on the issues that may be encountered in the Enterprise when an architecural change like this is introduced.
  
@@ -13,12 +13,12 @@ Any quesions or discussion can be sent by Email to control-flow-integrity@nsa.go
 
 ## Code 
 
-The code folder has actual binary implementations of SW that would leverage the HW described in the paper. It is hoped that researchers can learn more about the effect and strength of this technique by reverse engineering and perhaps doing some form of static analysis on them. The files are:
+The [code folder](https://github.com/iadgov/Control-Flow-Integrity/tree/master/code) has actual binary implementations of SW that would leverage the HW described in the paper. It is hoped that researchers can learn more about the effect and strength of this technique by reverse engineering and perhaps doing some form of static analysis on them. The files are:
 
-2 source files having a buffer overflow of either a return address or a function pointer. (stack-return.c and stack-functionptr.c)
-2 Linux binaries that were compiled with new landing point opcodes. (stack-return and stack-functionptr)
-2 instrumented Linux libraries that were linked to the example buffer overflow binaries.(ld-linux-x86-64.so.2 and libc.so.6)
-1 binary of a typical linux utility that has been instrumented with landing point opcodes.
+* 2 source files having a buffer overflow of either a return address or a function pointer. (stack-return.c and stack-functionptr.c)
+* 2 Linux binaries that were compiled with new landing point opcodes. (stack-return and stack-functionptr)
+* 2 instrumented Linux libraries that were linked to the example buffer overflow binaries.(ld-linux-x86-64.so.2 and libc.so.6)
+* 1 binary of a typical linux utility that has been instrumented with landing point opcodes.
 
 With these simple examples, one can get started to see the impact of the CFI countermeasure in an entire address space.
 
