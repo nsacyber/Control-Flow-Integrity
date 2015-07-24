@@ -10,13 +10,13 @@ Hardware Control Flow Integrity (CFI) for an IT Ecosystem
 * [Download PDF](https://github.com/iadgov/Control-Flow-Integrity/raw/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
 * [View PDF on GitHub](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
 
-This paper is a brief introduction to the problem of memory corruption and a description of one way to solve the consequence of control flow hijacking. It also includes a discussion on the issues that may be encountered in the IT ecosystem when an architectural change like this is introduced.
+This paper is a brief introduction to the problem of memory corruption and a description of one way to prevent control flow hijacking. It also includes a discussion on the issues that may be encountered in the IT ecosystem when an architectural change like this is introduced.
  
 Questions or comments can be sent to control-flow-integrity@nsa.gov or [submitted](https://github.com/iadgov/Control-Flow-Integrity/issues/new) to [our GitHub issue tracker](https://github.com/iadgov/Control-Flow-Integrity/issues).
 
 ## Code 
 
-The [code folder](https://github.com/iadgov/Control-Flow-Integrity/tree/master/code) has binary implementations of software that would leverage the hardware described in the paper. It is hoped that researchers can learn more about the effect and strength of this technique by reverse engineering and performing some form of static analysis on them. The files are:
+The [code folder](https://github.com/iadgov/Control-Flow-Integrity/tree/master/code) has binary implementations of software that would leverage the hardware described in the paper. It is hoped that researchers can learn more about the effect and strength of this technique by reverse engineering and performing static analysis on them. The files are:
 
 * 2 source files that have a buffer overflow of either a return address or a function pointer (stack-return.c and stack-functionptr.c).
 * 2 Linux binaries that were compiled with new landing point opcodes (stack-return and stack-functionptr).
@@ -51,4 +51,3 @@ property or technical data rights.
 
 Nothing in this Work is intended to constitute an endorsement, explicit or implied, by the U.S.
 Government of any particular manufacturer's product or service.
-
