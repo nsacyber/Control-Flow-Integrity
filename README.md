@@ -31,6 +31,8 @@ In the future we will be releasing research results as well as possibly releasin
 ## License
 This work was prepared by an U.S. Government employee and, therefore, is excluded from copyright by Section 105 of the Copyright Act of 1976.
 
+Copyright and Related Rights in the Work worldwide are waived through the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) [Universal license](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+
 ## Disclaimer
 This Work is provided "as is." Any express or implied warranties, including but not limited to, the
 implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event
