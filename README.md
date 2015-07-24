@@ -1,28 +1,31 @@
-# Control-Flow-Integrity
+# Control Flow Integrity
 
 ## About This Project
 
-This project captures research to effectively fix the lack of underlying control flow enforcement that would prevent memory corruption exploitation. This is not existent today but could be implemented in the future by the IT industry.
+This project captures research to effectively fix the lack of underlying control flow enforcement that would prevent memory corruption exploitation. This mechanism does not exist today but could be implemented in the future by the IT industry.
 
 ## Paper
-[Hardware Control Flow Integrity (CFI) for an IT Ecosystem](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
 
-The paper is a brief introduction to the problem of memory corruption and a description of one way to solve the cyber consequence of control flow hijacking. Then a discussion on the issues that may be encountered in the Enterprise when an architecural change like this is introduced.
+Hardware Control Flow Integrity (CFI) for an IT Ecosystem
+* [Download PDF](https://github.com/iadgov/Control-Flow-Integrity/raw/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
+* [View PDF on GitHub](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
+
+This paper is a brief introduction to the problem of memory corruption and a description of one way to solve the consequence of control flow hijacking. It also includes a discussion on the issues that may be encountered in the IT ecosystem when an architectural change like this is introduced.
  
-Any quesions or discussion can be sent by Email to control-flow-integrity@nsa.gov or open an [issue via GitHub tracker](https://github.com/iadgov/Control-Flow-Integrity/issues/new).
+Questions or comments can be sent to control-flow-integrity@nsa.gov or [submitted](https://github.com/iadgov/Control-Flow-Integrity/issues/new) to [our GitHub issue tracker](https://github.com/iadgov/Control-Flow-Integrity/issues).
 
 ## Code 
 
-The [code folder](https://github.com/iadgov/Control-Flow-Integrity/tree/master/code) has actual binary implementations of SW that would leverage the HW described in the paper. It is hoped that researchers can learn more about the effect and strength of this technique by reverse engineering and perhaps doing some form of static analysis on them. The files are:
+The [code folder](https://github.com/iadgov/Control-Flow-Integrity/tree/master/code) has binary implementations of software that would leverage the hardware described in the paper. It is hoped that researchers can learn more about the effect and strength of this technique by reverse engineering and performing some form of static analysis on them. The files are:
 
-* 2 source files having a buffer overflow of either a return address or a function pointer. (stack-return.c and stack-functionptr.c)
-* 2 Linux binaries that were compiled with new landing point opcodes. (stack-return and stack-functionptr)
-* 2 instrumented Linux libraries that were linked to the example buffer overflow binaries.(ld-linux-x86-64.so.2 and libc.so.6)
-* 1 binary of a typical linux utility that has been instrumented with landing point opcodes.
+* 2 source files that have a buffer overflow of either a return address or a function pointer (stack-return.c and stack-functionptr.c).
+* 2 Linux binaries that were compiled with new landing point opcodes (stack-return and stack-functionptr).
+* 2 instrumented Linux libraries that were linked to the example buffer overflow binaries (ld-linux-x86-64.so.2 and libc.so.6).
+* 1 binary of a typical Linux utility that has been instrumented with landing point opcodes.
 
-With these simple examples, one can get started to see the impact of the CFI countermeasure in an entire address space.
+These simple examples demonstrate the impact of the CFI countermeasure in an entire address space.
 
-In the future we should be releasing more tools to enable researchers to reproduce their own binaries. This would include things like compiler extensions and perhaps full-runtimes that would work in an emulator such as QEMU. Also research results.
+In the future we will be releasing research results as well as possibly releasing tools to enable researchers to produce their own binaries. These tools would include items such as compiler extensions and possibly full runtimes that would work in an emulator such as QEMU.
 
 
 ## License
