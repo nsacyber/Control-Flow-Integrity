@@ -1,16 +1,12 @@
 # Control Flow Integrity
 
-## About This Project
+This project captures research to effectively fix the lack of underlying control flow enforcement that would prevent memory corruption exploitation. This mechanism does not exist today but could be implemented in the future by the IT industry. 
 
-This project captures research to effectively fix the lack of underlying control flow enforcement that would prevent memory corruption exploitation. This mechanism does not exist today but could be implemented in the future by the IT industry.
+## Hardware Control Flow Integrity (CFI) for an IT Ecosystem
+This paper is a brief introduction to the problem of memory corruption and a description of one way to prevent control flow hijacking. It also includes a discussion on the issues that may be encountered in the IT ecosystem when an architectural change like this is introduced.
 
-## Paper
-
-Hardware Control Flow Integrity (CFI) for an IT Ecosystem
 * [Download PDF](https://github.com/iadgov/Control-Flow-Integrity/raw/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
 * [View PDF on GitHub](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
-
-This paper is a brief introduction to the problem of memory corruption and a description of one way to prevent control flow hijacking. It also includes a discussion on the issues that may be encountered in the IT ecosystem when an architectural change like this is introduced.
  
 Questions or comments can be sent to control-flow-integrity@nsa.gov or [submitted](https://github.com/iadgov/Control-Flow-Integrity/issues/new) to [our GitHub issue tracker](https://github.com/iadgov/Control-Flow-Integrity/issues).
 
@@ -36,25 +32,16 @@ One can extract the gadgets (as defined on line 271/2 in the paper) from the bin
 In the future we will be releasing research results quantifying the strength and weakness of the proposal as well as possibly releasing tools to enable researchers to produce and run their own binaries. These tools would include items such as compiler extensions, QEMU extensions and full OS runtimes that would work in QEMU. The tools used to create the current code repository are fragile but getting better.
 
 ## License
-This work was prepared by an U.S. Government employee and, therefore, is excluded from copyright by Section 105 of the Copyright Act of 1976.
+This Work was prepared by a United States Government employee and, therefore, is excluded from copyright by Section 105 of the Copyright Act of 1976.
 
-Copyright and Related Rights in the Work worldwide are waived through the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) [Universal license](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+Copyright and Related Rights in the Work worldwide are waived through the [CC0 1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0/).
 
-## Disclaimer
-This Work is provided "as is." Any express or implied warranties, including but not limited to, the
-implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event
-shall the United States Government be liable for any direct, indirect, incidental, special, exemplary or
-consequential damages (including, but not limited to, procurement of substitute goods or services, loss
-of use, data or profits, or business interruption) however caused and on any theory of liability, whether
-in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of
-this Guidance, even if advised of the possibility of such damage.
+## Disclaimer of Warranty
+This Work is provided "as is". Any express or implied warranties, including but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the United States Government be liable for any direct, indirect, incidental, special, exemplary or consequential damages (including, but not limited to, procurement of substitute goods or services, loss of use, data or profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Work, even if advised of the possibility of such damage.
 
-The User of this Work agrees to hold harmless and indemnify the United States Government, its agents
-and employees from every claim or liability (whether in tort or in contract), including attorneys' fees,
-court costs, and expenses, arising in direct consequence of Recipient's use of the item, including, but not
-limited to, claims or liabilities made for injury to or death of personnel of User or third parties, damage
-to or destruction of property of User or third parties, and infringement or other violations of intellectual
-property or technical data rights.
+The User of this Work agrees to hold harmless and indemnify the United States Government, its agents and employees from every claim or liability (whether in tort or in contract), including attorneys' fees, court costs, and expenses, arising in direct consequence of Recipient's use of the item, including but not limited to, claims or liabilities made for injury to or death of personnel of User or third parties, damage to or destruction of property of User or third parties, infringement or other violations of intellectual property or technical data rights.
 
-Nothing in this Work is intended to constitute an endorsement, explicit or implied, by the U.S.
-Government of any particular manufacturer's product or service.
+Nothing in this Work is intended to constitute an endorsement, explicit or implied, by the United States Government of any particular manufacturer's product or service.
+
+## Disclaimer of Endorsement
+Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise, in this Work does not constitute an endorsement, recommendation, or favoring by the United States Government and shall not be used for advertising or product endorsement purposes.
