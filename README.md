@@ -7,7 +7,11 @@ This paper is a brief introduction to the problem of memory corruption and a des
 
 * [Download PDF](https://github.com/iadgov/Control-Flow-Integrity/raw/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
 * [View PDF on GitHub](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
- 
+
+Additionally, Intel recently disclosed an x86 instruction specification (CET) that closely resembles Landhere. 
+
+* [View spec at Intel](https://software.intel.com/en-us/isa-extensions/cet-preview)
+
 Questions or comments can be sent to control-flow-integrity@nsa.gov or [submitted](https://github.com/iadgov/Control-Flow-Integrity/issues/new) to [our GitHub issue tracker](https://github.com/iadgov/Control-Flow-Integrity/issues).
 
 ## Code 
@@ -29,7 +33,8 @@ The binaries contain no fine grained label checks. They only have a correspondin
 
 One can extract the gadgets (as defined on line 271/2 in the paper) from the binaries and attempt to chain them together. Note: RLP gadgets are of no semantic use due to the (imaginary) shadow stack. So gadget chains can only contain CLP and JLP based gadgets. To test validity of a claim, one can use gdb to "run" a gadget chain. First one can manually change the memory as an exploit might do by setting a breakpoint at the appropriate place and performing the overwrite(s). Then continue using single stepping. As a substitute for the HW enforcement, whenever an indirect branch occurs one can visually validate it lands on a landing point. If it reaches the goal (e.g. exec("Your string")) without crashing the application, you win and this form of CFI loses. There is no secret right answer. We believe it's not possible or extremely unreliable to bypass the minimal CFI design (line 116 in the paper) with these code samples (and others like them). Unfortunately, this is the best dynamic tool we can offer for now to allow independent validation.
 
-In the future we will be releasing research results quantifying the strength and weakness of the proposal as well as possibly releasing tools to enable researchers to produce and run their own binaries. These tools would include items such as compiler extensions, QEMU extensions and full OS runtimes that would work in QEMU. The tools used to create the current code repository are fragile but getting better.
+Other research:
+Galois has taken the time and effort to implement a full Linux build of Landhere+ShadowStack concept. This includes instrumented binaries and a VM to create Landhere binaries on one's own. http://landhere.galois.com/
 
 ## License
 This Work was prepared by a United States Government employee and, therefore, is excluded from copyright by Section 105 of the Copyright Act of 1976.
