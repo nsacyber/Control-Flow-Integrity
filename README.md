@@ -52,11 +52,9 @@ Dispatch loop is a quasi gadget that is used to chain multiple return gadgets (i
 
 Link is a forward flowing gadget that does not return (gadget block exit is either a call\* or jmp\*). 
 
-Atomic is the minimal size gadget for an exiting free branch (return, call\* or jmp\*). Namely it has the closest preceding landing point. 
-
-Many of the gadgets contain multiple landing points because the size limit was up to 50 instructions. These non-atomic gadgets are included to illustrate side effects that might, or might not, be useful since one is not restricted to branching to the nearest landing from a free branch. 
-
 Pre and post stitch gadgets are a sub-genre of link gadgets that can be combined if the stack pointer change is neutral to the shadow stack.
+
+Atomic is the minimal size gadget for a particular free branch. Namely it is the flow from closest preceding landing point. There may be several Atomic gadgets that flow to the same free branch given any pre-conditions. However, because the maximum size is up to 50 instructions, a gadget might also flow through multiple landing points before encountering a free branch. These nested gadgets are included (but aren’t labeled as atomic) to illustrate side effects that might, or might not, be useful since one is not restricted to branching to the nearest landing point from a free branch. Atomic serves to bound the smallest theoretical flows.
 
 ## License
 See [LICENSE](LICENSE.md).
