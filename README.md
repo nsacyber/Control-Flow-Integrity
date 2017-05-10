@@ -5,8 +5,8 @@ This project captures research to effectively fix the lack of underlying control
 ## Hardware Control Flow Integrity (CFI) for an IT Ecosystem
 This paper is a brief introduction to the problem of memory corruption and a description of one way to prevent control flow hijacking. It also includes a discussion on the issues that may be encountered in the IT ecosystem when an architectural change like this is introduced.
 
-* [Download PDF](https://github.com/iadgov/Control-Flow-Integrity/raw/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
-* [View PDF on GitHub](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware Control Flow Integrity for an IT Ecosystem.pdf)
+* [Download PDF](https://github.com/iadgov/Control-Flow-Integrity/raw/master/paper/Hardware%20Control%20Flow%20Integrity%20for%20an%20IT%20Ecosystem.pdf)
+* [View PDF on GitHub](https://github.com/iadgov/Control-Flow-Integrity/blob/master/paper/Hardware%20Control%20Flow%20Integrity%20for%20an IT%20Ecosystem.pdf)
 
 Additionally, Intel recently disclosed an x86 instruction specification called Control-flow Enforcement Technology (CET) that closely resembles Landhere. 
 
